@@ -1,0 +1,12 @@
+<link rel"stylesheet" href="todo.css" type="text/css">
+		.high {
+			background-color: green;
+		}
+		.medium {
+			background-color: blue;
+		}
+		.low {
+			background-color: purple;
+		}
+		.completed {
+			text-decoration: line-through;
