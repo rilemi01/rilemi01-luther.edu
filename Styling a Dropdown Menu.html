@@ -1,0 +1,118 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+        "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Styling a Dropdown Menu</title>
+<style type="text/css">
+body {
+background: #EEE;
+color:#000; 
+}
+
+h1 {
+color: #AAA;
+border-bottom:1px solid;
+margin bottom: 0;
+}
+
+#main {
+color: #CCC;
+margin-left: 7em;
+padding: 1px 0 1 px 5%;
+border-left:1px solid;
+}
+
+div#nav {
+float:left
+width: 7em;
+background: #FDD;
+}
+
+div#nav ul{
+margin: 0;
+padding: 0;
+width: 7em;
+background: white;
+border: 1px solid;
+}
+
+div#nav li{
+position: relative; 
+list-style: none;
+margin: 0;
+border-bottom: 1px solid #CCC
+}
+
+div#nav li.submenu{
+background: url(submenu.gif) 95% 50% no-report;
+}
+
+div#nav ul ul{position: absolute top: 0; left 7em;
+}
+
+div#nav li:hover {background: #EBB;
+}
+
+div#nav li a {display:black; padding: 0.25em 0 0.25em 0.5em;
+text-decoration: none; width 6.5em
+}
+
+div#nav ul ul{position: absolute;top: 0; left: 7em;}
+display: none;
+
+div#nav ul.level1 li.submenu:hover ul level2
+div#nav ul.level2 li.submenu:hover ul level3 {display:black;}
+</style>
+</head>  
+<body>
+<h1>Adipiscing Rhubarb</h1>
+
+<div id="nav">
+<ul>
+ <li><a href="http://reputablejournal.com/">Home</a></li>
+ <li><a href="http://reputablejournal.com/services/">Services</a>
+  <ul>
+   <li><a href="http://reputablejournal.com/services/strategy/">Strategy</a></li>
+   <li><a href="http://reputablejournal.com/services/optimize/">Optimization</a></li>
+   <li><a href="http://reputablejournal.com/services/guidance/">Guidance</a></li>
+   <li><a href="http://reputablejournal.com/services/training/">Training</a></li>
+  </ul>
+ </li>
+ <li><a href="http://reputablejournal.com/events/">Events</a></li>
+ <li><a href="http://reputablejournal.com/pubs/">Publications</a>
+  <ul>
+   <li><a href="http://reputablejournal.com/pubs/articles/">Articles</a></li>
+   <li><a href="http://reputablejournal.com/pubs/tuts/">Tutorials</a>
+    <ul>
+     <li><a href="http://reputablejournal.com/pubs/tuts/html/">HTML</a></li>
+     <li><a href="http://reputablejournal.com/pubs/tuts/css/">CSS</a></li>
+     <li><a href="http://reputablejournal.com/pubs/tuts/svg/">SVG</a></li>
+     <li><a href="http://reputablejournal.com/pubs/tuts/xml/">XML</a></li>
+    </ul>
+   </li>
+   <li><a href="http://reputablejournal.com/pubs/wpapers/">White Papers</a></li>
+   <li><a href="http://reputablejournal.com/pubs/comment/">Commentary</a></li>
+  </ul>
+ </li>
+ <li><a href="http://reputablejournal.com/contact/">Contact</a></li>
+</ul>
+</div>
+
+<div id="main">
+<p>
+Lorem ipsum, dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+ Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+Lorem ipsum, dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+Lorem ipsum, dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+Lorem ipsum, dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+ Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+Lorem ipsum, dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+Lorem ipsum, dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+</p>
+
+</div>
+
+</body>
+</html>
