@@ -1,0 +1,133 @@
+<html>
+        <body>
+            <h1>Todo List</h1>
+		<main>
+			<ul id=tasklist>
+			</ul>
+		</main>
+		<style>
+		.Medium-P {
+			color: green;
+			background-color: black;
+		}
+		.Low-P {
+			color: brown;
+			background-color: black;
+		}
+		.High-P {
+			color:red;
+			background-color: black;
+		}
+		.Completed {
+			text-decoration: line-through;
+			font-style: italic;
+			color: gray;
+			}
+			input: checked {
+			text-decoration: line-through;
+			color: gray;
+			}
+			main {
+			border:2px solid;
+			width:55k;
+			height:550px
+			}
+		HighFunc= function() {
+		listItem = document.querySelector('li') 
+		listItem.className = "High-P"
+		}
+		MediumFunc= function() {
+		listItem = document.querySelector('li')
+		listItem.className = "Medium-P"
+		}
+		LowFunc= function() {
+		listItem = document.querySelector('li')
+		listItem.className = "Low-P"
+		</style>
+		<aside>
+			<label for="taskbox">Enter Task:</label>
+			<input type="text" id="taskbox" size=40 value="Task">
+			<select id="priority">
+				<option>High</option>
+				<option>Medium</option>
+				<option>Low</option>
+			</select>
+			<button onclick="addTask()">New Task</button>
+		</aside>
+		<script type="text/javascript">
+			addTask = function(){
+			i = document.querySelector("#taskbox")
+			bl = document.querySelector("#tasklist")
+			li = document.createElement("li")
+			cb = document.createElement("input")
+			cb.type = "checkbox"
+			t = document.createTextNode(i.value)
+			li.appendChild(cb)
+			li.appendChild(t)
+			bl.appendChild(li)
+		}
+	var taskCount = 10
+		
+	doneTask = function(){
+		// this is the box that was clicked
+		if (this.checked) {
+			this.parentNode.classList.add("done");
+		} else {
+			 this.parentNode.classList.remove("done");
+		}
+			
+		localSave()
+	}
+	
+	localSave = function(){
+		var res =[]
+		var i;
+		allEntries = document.querySelectorAll('li')
+		for(i=0; i < allEntries.length; i++) {
+			if (! allEntries[i].classList.contains(done")) {
+				res.push(allEntries[i].innerText);
+				}
+			}
+			console.log(res)
+			//store the array in localstorage
+			//alert(JSON.stringify(res))
+			localStorage.setItem("todoDatabase",JSON.stringify(res))
+}
+	restoreTasks = function() {
+  		allTasks = JSON.parse(localStorage.getItem('todoDatabase'))
+  		for(i = 0; i < allTasks.length; i++) {
+     	 	insertTaskInTree(allTasks[i],"Medium");
+  }
+}
+	insertTaskInTree = function(taskText, priorityValue)  {
+    // Get a reference to the list in the tree
+    taskList = document.querySelector("#busylist");
+    // Create the li element and set priority    
+    newli = document.createElement('li');
+    newli.className = priorityValue;
+    // Create the checkbox
+    newcb = document.createElement('input');
+    newcb.type = 'checkbox';
+    newcb.onclick = doneTask;
+    // Create the text Node
+    t = document.createTextNode(taskText);
+    // Plug our new elements into  the tree.
+    newli.appendChild(newcb);
+    newli.appendChild(t);
+    taskList.appendChild(newli);
+    
+}
+addTask = function() {
+    var newli;
+    task = document.querySelector("#taskbox");
+    taskList = document.querySelector("#busylist");
+    priorityValue = document.querySelector("#priority").value;
+    taskText = task.value;
+    insertTaskInTree(taskText,priorityValue);
+    task.value = "";
+    // save everything to local storage.
+    localSave()
+}
+		</script>
+	</body>
+</html>
